@@ -1,0 +1,10 @@
+{
+  "build_dir": "<where you built your Unity game>",
+  "name": "<name of your game; also becomes ecr repo, task def, and service name>",
+  "tag": "latest",
+  "cluster": "<name of your cluster>",
+  "task_role_arn": "arn:aws:iam::<your AWS account id>:role/ecsTaskRole",
+  "execution_role_arn": "arn:aws:iam::<your AWS account id>:role/ecsTaskRole",
+  "cpu": "1024",
+  "memory": "1024"
+}

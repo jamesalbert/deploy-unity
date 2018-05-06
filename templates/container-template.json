@@ -1,0 +1,29 @@
+{
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/<NAME>",
+          "awslogs-region": "<REGION>",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "protocol": "tcp",
+          "containerPort": 80
+        }
+      ],
+      "cpu": 0,
+      "environment": [],
+      "mountPoints": [],
+      "memory": <MEMORY>,
+      "volumesFrom": [],
+      "image": "<REPO_URL>",
+      "essential": true,
+      "name": "<NAME>"
+    }
+  ]
+}
