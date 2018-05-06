@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 function get-config {
   jq -r .$1 config.json
 }
