@@ -23,9 +23,10 @@ Deploy your Unity WebGL game to Amazon's Elastic Container Service using this ha
     - name your service with the name you will set in `config.json`
     - recommended: set your service behind an ALB ([guide](https://aws.amazon.com/blogs/compute/microservice-delivery-with-amazon-ecs-and-application-load-balancers/))
 
-To summarize, use your domain to create a CNAME to the ALB. Use the TLS certificate to encrypt the traffic between the client and the ALB. Then configure a target group to forward traffic to your service's tasks. This tool doesn't touch on any of these things, but you should have this setup before hosting a game. If this sounds unfamiliar to you, use da googles.
 
-Last thing to note is to ensure that the ecs task role you use have ecr:* and logs:* permissions. It doesn't have to be *that* open, but  ¯\\\_(ツ)\_/¯.
+Create a CNAME under your domain that points to the ALB ([guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html)). Use the TLS certificate to encrypt the traffic between the client and the ALB ([guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html)). Then configure a target group to forward traffic to your service's tasks ([guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)). This tool doesn't touch on any of these things, but you should have this setup before hosting a game.
+
+Last thing to note is to ensure that the ECS task role you use have ecr:* and logs:* permissions. It doesn't have to be *that* open, but  ¯\\\_(ツ)\_/¯.
 
 ### Configuration
 
