@@ -61,7 +61,7 @@ function deploy {
   push
   revise
   update
-  echo "BUILD SUCCESS"
+  echo "DEPLOYMENT SUCCESSFUL"
 }
 
 function deactivate {
