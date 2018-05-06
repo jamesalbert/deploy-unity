@@ -34,12 +34,13 @@ Before you begin, be sure to have aws-cli and ecs-cli configured. If you don't a
 
 Once that's done, the first thing you need to do is fill out `config.json`:
 
+  - build_dir: build directory (where you built to from Unity)
   - name: the name for your ECR repository, task definition, and service
   - tag: tag your deploy (usually "latest")
   - cluster: name of your cluster
   - task_role_arn: role arn the containers will assume
   - execution_role_arn: role arn that container agents and docker daemon will assume
-  - network_mode: bridge, host, awsvpc, or none
+  - network_mode: bridge, host, awsvpc, or none (not implemented, uses default)
   - cpu: CPU units
   - memory: MiB units
 
