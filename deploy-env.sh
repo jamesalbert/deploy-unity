@@ -40,7 +40,6 @@ function revise {
     --family $NAME \
     --task-role-arn $TASK_ROLE_ARN \
     --execution-role-arn $EXECUTION_ROLE_ARN \
-    # --network-mode $NETWORK_MODE \
     --cpu $CPU \
     --memory $MEMORY \
     --requires-compatibilities EC2 \
