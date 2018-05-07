@@ -3,6 +3,7 @@
   "name": "<name of your game; also becomes ecr repo, task def, and service name>",
   "tag": "latest",
   "cluster": "<name of your cluster>",
+  "network_mode": "bridge",
   "task_role_arn": "arn:aws:iam::<your AWS account id>:role/ecsTaskRole",
   "execution_role_arn": "arn:aws:iam::<your AWS account id>:role/ecsTaskRole",
   "cpu": "1024",
